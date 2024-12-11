@@ -1,3 +1,6 @@
+import * as React from "react";
+
+
 export const SampleButton = (
     {label, onClick}:
     {label:string; onClick:(ev:any) => void;}) => {
@@ -6,4 +9,25 @@ export const SampleButton = (
 
 export const HeaderNoArgs = () => {
 	return <h1> Header NoArgs </h1>
+}
+
+export const IncrementButton = ({value, setValue }:{value:number, setValue:any}) => {
+
+    const bClick = () => {
+	setValue(value + 1)
     }
+    return <button onClick={bClick}>{value}</button>
+}
+
+export const Counter = () => {
+    const [count, setCount] = React.useState(1);
+
+    return (<div>
+	<IncrementButton value={count} setValue={setCount} />
+	<IncrementButton value={count} setValue={setCount} />
+	</div>
+	)
+
+
+}
+

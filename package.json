@@ -6,6 +6,7 @@
 	},
 	"dependencies": {
 		"@anywidget/react": "^0.0.8",
+	    "some-react-tsxlib": "./packages/some-react-tsxlib",
 		"react": "^18.3.1",
 		"react-dom": "^18.3.1"
 	},

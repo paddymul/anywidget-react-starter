@@ -1,9 +1,10 @@
 import * as React from "react";
 import { createRender, useModelState } from "@anywidget/react";
+import srt from "some-react-tsxlib";
 import "./widget.css";
 
-const render = createRender(() => {
-	const [value, setValue] = useModelState<number>("value");
+const unused = () => {
+    	const [value, setValue] = useModelState<number>("value");
 	return (
 		<div className="anyw2_react">
 			<button onClick={() => setValue(value + 1)}>
@@ -11,6 +12,9 @@ const render = createRender(() => {
 			</button>
 		</div>
 	);
+}
+const render = createRender(() => {
+    return <srt.Counter />
 });
 
 export default { render };

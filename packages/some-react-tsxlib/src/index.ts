@@ -1,6 +1,4 @@
 import _ from "lodash";
-import { SampleButton, HeaderNoArgs } from "./SampleComponent";
+import { SampleButton, HeaderNoArgs, Counter } from "./SampleComponent";
 
-export default {SampleButton, HeaderNoArgs, _ }
-//force print of lodash to make sure it is bundled
-console.log("index.ts", _)
+export default {SampleButton, HeaderNoArgs, Counter }
