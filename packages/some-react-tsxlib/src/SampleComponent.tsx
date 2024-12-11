@@ -1,4 +1,4 @@
-import * as React from "react";
+import { useState } from "react";
 
 
 export const SampleButton = (
@@ -20,7 +20,7 @@ export const IncrementButton = ({value, setValue }:{value:number, setValue:any})
 }
 
 export const Counter = () => {
-    const [count, setCount] = React.useState(1);
+    const [count, setCount] = useState(1);
 
     return (<div>
 	<IncrementButton value={count} setValue={setCount} />
