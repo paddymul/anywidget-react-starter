@@ -52,7 +52,7 @@ export class RechartExample extends PureComponent {
   render() {
     console.log("rechart example");
     return (
-      <ResponsiveContainer width="100%" height="100%">
+	<ResponsiveContainer  width={500} height={500}>
         <LineChart
           width={500}
           height={300}
