@@ -15,7 +15,7 @@ const unused = () => {
 }
 const render = createRender(() => {
     console.log("old render 17");
-    return <srt.Counter />
+    return <srt.RechartExample />
 });
 
 
