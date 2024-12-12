@@ -13,7 +13,7 @@ const unused = () => {
 		</div>
 	);
 }
-const render = createRender(() => {
+const render2 = createRender(() => {
     console.log("old render 17");
     return <srt.Counter />
 });
@@ -127,7 +127,7 @@ const ex_df_data = [
 ]
 
 
-const render2 = createRender(() => {
+const render = createRender(() => {
 
     const [df_data, _set_df_meta] = useModelState('df_data');
     const [df_viewer_config, _set_dfvc] = useModelState('df_viewer_config');
