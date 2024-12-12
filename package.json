@@ -1,7 +1,8 @@
 {
 	"scripts": {
 		"dev": "npm run build -- --sourcemap=inline --watch",
-		"build": "esbuild js/widget.tsx --minify --format=esm --bundle --outdir=src/anyw2_react/static",
+		"build": "esbuild js/widget.tsx --format=esm --bundle --outdir=src/anyw2_react/static",
+		"build2": "esbuild js/widget.tsx --minify --format=esm --bundle --outdir=src/anyw2_react/static",
 		"typecheck": "tsc --noEmit"
 	},
 	"dependencies": {
