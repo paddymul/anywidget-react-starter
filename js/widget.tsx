@@ -2,7 +2,7 @@ import * as React from "react";
 import { createRender, useModelState } from "@anywidget/react";
 import srt from "some-react-tsxlib";
 import "./widget.css";
-
+import "../packages/some-react-tsxlib/dist/style.css"
 const unused = () => {
     	const [value, setValue] = useModelState<number>("value");
 	return (
