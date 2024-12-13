@@ -1,8 +1,8 @@
 import * as React from "react";
 import { createRender, useModelState } from "@anywidget/react";
-import srt from "some-react-tsxlib";
+import srt from "buckaroo-js-core";
 import "./widget.css";
-import "../packages/some-react-tsxlib/dist/style.css"
+import "../packages/buckaroo-js-core/dist/style.css"
 const unused = () => {
     	const [value, setValue] = useModelState<number>("value");
 	return (
