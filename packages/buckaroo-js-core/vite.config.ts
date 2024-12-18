@@ -2,6 +2,7 @@
 import { defineConfig } from "vite";
 import dts from "vite-plugin-dts";
 import { peerDependencies } from "./package.json";
+import { viteExternalsPlugin } from 'vite-plugin-externals'
 
 export default defineConfig({
     build: {
@@ -14,13 +15,20 @@ export default defineConfig({
         rollupOptions: {
             //external: [...Object.keys(peerDependencies)], // Defines external dependencies for Rollup bundling.
             external: ["react", "react-dom", 'react/jsx-runtime'],
-            globals : { react : 'React', 'react-dom': 'react-dom'},
+            //globals : { react : 'React', 'react-dom': 'react-dom'},
         },
         sourcemap: true, // Generates source maps for debugging.
         emptyOutDir: true, // Clears the output directory before building.
         minify: false
     },
-    plugins: [dts()], // Uses the 'vite-plugin-dts' plugin for generating TypeScript declaration files (d.ts).
+    plugins: [dts(),
+    viteExternalsPlugin({
+      react: 'React',
+      'react-dom': 'ReactDOM',
+      // value support chain, transform to window['React']['lazy']
+//      lazy: ['React', 'lazy']
+    }, { useWindow: false }),
+  	     ], // Uses the 'vite-plugin-dts' plugin for generating TypeScript declaration files (d.ts).
     test: {
         globals: true,
         environment: "jsdom",
