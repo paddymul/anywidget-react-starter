@@ -2,7 +2,7 @@
     "scripts": {
 	"dev": "npm run build -- --sourcemap=inline --watch",
 	"clean": "rm widget.js",
-	"build": "esbuild js/widget.tsx --format=esm --bundle --outdir=./",
+	"build": "esbuild js/widget.tsx --format=esm --bundle --outdir=./foo/",
 	"full_build": "clean && build",
 	"typecheck": "tsc --noEmit"
     },

@@ -13,6 +13,12 @@
     "/dist"
   ],
   "dependencies": {
+    "@ag-grid-community/client-side-row-model": "^32.3.2",
+    "@ag-grid-community/core": "^32.3.2",
+    "@ag-grid-community/infinite-row-model": "^32.3.2",
+    "@ag-grid-community/react": "^32.3.2",
+    "@ag-grid-community/styles": "^32.3.2",
+    "recharts": "^2.13.1",
     "lodash": "^4.17.21"
   },
   "devDependencies": {
@@ -38,12 +44,6 @@
   },
   "peerDependencies": {
     "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "@ag-grid-community/client-side-row-model": "^32.3.2",
-    "@ag-grid-community/core": "^32.3.2",
-    "@ag-grid-community/infinite-row-model": "^32.3.2",
-    "@ag-grid-community/react": "^32.3.2",
-    "@ag-grid-community/styles": "^32.3.2",
-    "recharts": "^2.13.1"
+    "react-dom": "^18.3.1"
   }
 }
