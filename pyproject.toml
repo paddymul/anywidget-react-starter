@@ -24,12 +24,13 @@ dev = ["watchfiles", "jupyterlab"]
 only-packages = true
 artifacts = ["src/anyw2_react/static/*"]
 
-# [tool.hatch.build.hooks.jupyter-builder]
-# build-function = "hatch_jupyter_builder.npm_builder"
-# ensured-targets = ["src/anyw2_react/static/widget.js"]
-# skip-if-exists = ["src/anyw2_react/static/widget.js"]
-# dependencies = ["hatch-jupyter-builder>=0.5.0"]
+[tool.hatch.build.hooks.jupyter-builder]
+build-function = "hatch_jupyter_builder.npm_builder"
+ensured-targets = ["src/anyw2_react/static/widget.js"]
+skip-if-exists = ["src/anyw2_react/static/widget.js"]
+dependencies = ["hatch-jupyter-builder>=0.5.0"]
 
-# [tool.hatch.build.hooks.jupyter-builder.build-kwargs]
-# npm = "npm"
-# build_cmd = "build"
+[tool.hatch.build.hooks.jupyter-builder.build-kwargs]
+npm = "npm"
+build_cmd = "build"
+path = "packages/bundle-staging"
