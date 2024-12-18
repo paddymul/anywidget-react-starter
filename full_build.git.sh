@@ -5,7 +5,7 @@ rm -rf  packages/buckaroo-js-core/dist packages/buckaroo-js-core/node_modules
 #cd packages/some-react-tsxlib
 cd packages/buckaroo-js-core
 npm install && npm run build
-
+rm -rf  packages/buckaroo-js-core/node_modules
 #cd ../..
 cd ../bundle-staging
 npm install && npm run build
